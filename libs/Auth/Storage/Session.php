@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the 'octris/core' package.
+ * This file is part of the 'octris/auth' package.
  *
  * (c) Harald Lapp <harald@octris.org>
  *
@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Octris\Core\Auth\Storage;
+namespace Octris\Auth\Storage;
 
 /**
  * Storage handler for storing identity into session.
  *
- * @copyright   copyright (c) 2011-2014 by Harald Lapp
+ * @copyright   copyright (c) 2011-2018 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Session implements \Octris\Core\Auth\IStorage
+class Session implements \Octris\Auth\IStorage
 {
     /**
      * Instance of session class.
@@ -47,9 +47,9 @@ class Session implements \Octris\Core\Auth\IStorage
     /**
      * Store identity in storage.
      *
-     * @param   \Octris\Core\Auth\Identity  $identity       Identity to store in storage.
+     * @param   \Octris\Auth\Identity  $identity       Identity to store in storage.
      */
-    public function setIdentity(\Octris\Core\Auth\Identity $identity)
+    public function setIdentity(\Octris\Auth\Identity $identity)
     {
         $this->session->setValue('identity', base64_encode(serialize($identity)), __CLASS__);
     }
@@ -57,7 +57,7 @@ class Session implements \Octris\Core\Auth\IStorage
     /**
      * Return identity from storage.
      *
-     * @return  \Octris\Core\Auth\Identity                  Identity stored in storage.
+     * @return  \Octris\Auth\Identity                  Identity stored in storage.
      */
     public function getIdentity()
     {
