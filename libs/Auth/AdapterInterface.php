@@ -17,7 +17,7 @@ namespace Octris\Auth;
  * @copyright   copyright (c) 2011-2018 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-interface IAdapter
+interface AdapterInterface
 {
     /**
      * Authentication method, needs to be implemented by adapter.
