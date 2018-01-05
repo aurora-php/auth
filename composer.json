@@ -3,7 +3,7 @@
     "description": "Authentication component.",
     "type": "library",
     "license": "BSD-3-Clause",
-    "homepage": "https://github.com/octris/db-auth",
+    "homepage": "https://github.com/octris/auth",
     "authors": [
         {
             "name": "Harald Lapp",
