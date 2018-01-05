@@ -17,7 +17,7 @@ namespace Octris\Auth\Storage;
  * @copyright   copyright (c) 2011-2018 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Session implements \Octris\Auth\IStorage
+class Session implements \Octris\Auth\StorageInterface
 {
     /**
      * Instance of session class.

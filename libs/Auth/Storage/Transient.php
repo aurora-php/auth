@@ -18,7 +18,7 @@ namespace Octris\Auth\Storage;
  * @copyright   copyright (c) 2011-2018 by Harald Lapp
  * @author      Harald Lapp <harald@octris.org>
  */
-class Transient implements \Octris\Auth\IStorage
+class Transient implements \Octris\Auth\StorageInterface
 {
     /**
      * Transient identity storage.

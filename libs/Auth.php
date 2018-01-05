@@ -39,7 +39,7 @@ class Auth
     /**
      * Authentication storage handler.
      *
-     * @type    \Octris\Auth\IStorage
+     * @type    \Octris\Auth\StorageInterface
      */
     protected $storage;
 
@@ -75,9 +75,9 @@ class Auth
     /**
      * Sets the storage handler for authentication information.
      *
-     * @param   \Octris\Auth\IStorage    $storage    Instance of storage backend.
+     * @param   \Octris\Auth\StorageInterface    $storage    Instance of storage backend.
      */
-    public function setStorage(\Octris\Auth\IStorage $storage)
+    public function setStorage(\Octris\Auth\StorageInterface $storage)
     {
         $this->storage = $storage;
     }
@@ -103,10 +103,10 @@ class Auth
     /**
      * Authenticate againat the specified authentication adapter.
      *
-     * @param   \Octris\Auth\IAdapter    $adapter           Instance of adapter to use for authentication.
-     * @return  \Octris\Auth\Identity                       The authenticated identity.
+     * @param   \Octris\Auth\AdapterInterface    $adapter           Instance of adapter to use for authentication.
+     * @return  \Octris\Auth\Identity                               The authenticated identity.
      */
-    public function authenticate(\Octris\Auth\IAdapter $adapter)
+    public function authenticate(\Octris\Auth\AdapterInterface $adapter)
     {
         $identity = $adapter->authenticate();
 
